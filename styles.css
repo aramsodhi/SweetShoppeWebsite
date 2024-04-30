@@ -87,8 +87,8 @@ section {
 }
 
 #landing {
-    background-color: #ffffff;
-    background-image: url("media/slider.jpg");
+    background-color: #ffabfb;
+    background-image: url("/media/slider.jpg");
     background-size: cover;
     background-position: center;
 
@@ -183,6 +183,8 @@ section {
     transition: 0.3s ease-in-out all;
     color: #ff8396;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    font-family: "Life Savers", serif;
+
 }
 
 .contact-container button:hover {
@@ -333,7 +335,7 @@ footer {
     position: absolute;
     left: 10%;
     top: 70%;
-    width: 120px;
+    width: 150px;
     height: 60px;
     transform: translate(-50%, -50%);
     display: flex;
@@ -395,8 +397,26 @@ footer {
       width: auto;
       overflow-x: hidden;
     }
-  }
+}   
 
 
 
-  
+
+.text-container {
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    left: 30%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.text-container h1 {
+    font-size: 84px;
+    font-family: "Lobster", sans-serif;
+    color: #e57587;
+}
+
+.text-container p {
+    transform: translateY(-40px);
+}
