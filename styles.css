@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
 
-    background-color: #ffabfb;
+    background-color: #ffffff;
 
     overflow-x: hidden;
 }
@@ -25,6 +25,8 @@ body {
 
     position: fixed;
     top: 0;
+
+    z-index: 1;
 }
 
 .navbar {
@@ -33,10 +35,9 @@ body {
 
     border-radius: 7px;
 
-    background-color: ghostwhite;
+    background-color: #ff8396;
 
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-
     /*filter: drop-shadow(10px 10px rgba(0, 0, 0, 0.1));*/
 }
 
@@ -66,8 +67,8 @@ body {
     height: 3px;
     left: 50%;
     position: absolute;
-    background: #ffabfb;
-    transition: 0.3s ease 0s, left 0.3s ease 0s;
+    background: #ffffff;
+    transition: 0.15s ease 0s, left 0.15s ease 0s;
     width: 0;
   }
   .link-container a:hover:after { 
@@ -87,20 +88,14 @@ section {
 
 #landing {
     background-color: #ffabfb;
+    background-image: url("/media/slider.jpg");
+    background-size: cover;
+    background-position: center;
+
 
     overflow: hidden;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slant {
-    position: absolute;
-    background-color: #c54c82;
-    width: 100vw;
-    height: 100vh;
-    transform: translateX(60vw) rotate(32deg);
 }
 
 .left-side-landing {
@@ -130,7 +125,7 @@ section {
 }
 
 #contact {
-    background-color: #66cdaa;
+    background-color: #ffffff;
 
     display: flex;
     justify-content: center;
@@ -138,7 +133,7 @@ section {
 }
 
 .contact-container {
-    width: 400px;
+    width: 500px;
     height: 600px;
 
     display: flex;
@@ -157,13 +152,19 @@ section {
     outline: none;
     padding: 20px;
     margin: 10px;
-    background-color: ghostwhite;
+    background-color: white;
     /*font-family: "Roboto", sans-serif*/
     font-size: 16px;
-    border-left: 3px solid green;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 5px;
     color: black;
     font-weight: bolder;
+    filter: drop-shadow(3px 3px #ff8396);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    resize: none;
+}
+
+.contact-container textarea {
+    height: 100px;
 }
 
 .contact-container button {
@@ -172,18 +173,21 @@ section {
     outline: none;
     border: none;
     cursor: pointer;
-    background-color: ghostwhite;
+    background-color: #ffffff;
+    filter: drop-shadow(3px 3px #ff8396);
     border-radius: 5px;
     font-weight: bolder;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    transition: 0.3s ease-in-out all
+    transition: 0.3s ease-in-out all;
+    color: #ff8396;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .contact-container button:hover {
-    background-color: green;
-    color: ghostwhite;
+    background-color: #ff8396;
+    color: white;
 }
 
 footer {
@@ -191,6 +195,45 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    background-color: #ffb6c1;
+}
+
+.left-side-footer, .middle-footer, .right-side-footer {
+    width: 50vw;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.left-side-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-side-footer a {
+    margin: 15px;
+    margin-left: 20%;
+
+    color: #19191a;
+
+    float: left;
+}
+
+.middle-footer, .right-side-footer {
+    align-items: center;
+}
+
+.middle-footer img {
+    max-height: 90%;
+}
+
+.right-side-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .fa {
@@ -203,11 +246,9 @@ footer {
 }
 
 #about {
-    background-color: #3fabfb;
-}
-
-#about {
+    background-color: #ffffff;
     display: flex;
+    color: black;
 }
 
 .left-side, .right-side {
@@ -223,29 +264,35 @@ footer {
 }
 
 .left-side img {
-    width: 60%;
-    margin: 10px;
-    max-width: 500px;
+    max-height: 90%;
 }
 
+
+
 .right-side {
-    background-color: dodgerblue;
+    background-color: white;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    color: white;
     font-weight: bolder;
 }
 
 
+.right-side p {
+    max-width: 90%;
+    font-size: 18px;
+}
+
 #sweets {
-    background-color: #f6ffa6;
+    width: 100vw;
+    background-color: #ffb6c1;
     text-align: center;
     padding-top: 15px;
     height: auto;
+
 }
 
 #sweets h1 {
@@ -282,16 +329,74 @@ footer {
     transform: scale(1.05);
 }
 
-@media screen and (max-width:768px) {
-  .flavor {
-    margin: 2px;
-  }
-
-  #about {
+.scroll-down {
+    position: absolute;
+    left: 10%;
+    top: 70%;
+    width: 120px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: 2s infinite bounce;
+    color: #19191a;
+}
+
+.scroll-down {
+    text-decoration: none;
+}
+
+.scroll-down:visited {
+    color: #19191a;
+}
+
+.scroll-down-icon {
+    height: 30px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .flavor {
+      margin: 2px;
+      transform: scale(0.9);
+    }
+  
+    #about {
+      flex-direction: column;
+      height: 150vh;
+    }
+
+    .left-side {
+        height: 50vh;
+    }
+  
+    .left-side, .right-side {
+      width: 100vw;
+    }
+  
+    .left-side img {
+      max-width: 90%;
+    }
+  
+    #sweets {
+      padding: 30px;
+      width: auto;
+      overflow-x: hidden;
+    }
   }
 
-  .left-side, .right-side {
-    width: 100vw;
-  }
-}
+
+
+  
