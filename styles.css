@@ -70,6 +70,7 @@ body {
     background: #ffffff;
     transition: 0.15s ease 0s, left 0.15s ease 0s;
     width: 0;
+    border-radius: 2px;
   }
   .link-container a:hover:after { 
     width: 100%; 
