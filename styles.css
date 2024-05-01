@@ -87,8 +87,8 @@ section {
 }
 
 #landing {
-    background-color: #ffffff;
-    background-image: url("media/slider.jpg");
+    background-color: #ffabfb;
+    background-image: url("/media/slider.jpg");
     background-size: cover;
     background-position: center;
 
@@ -369,7 +369,39 @@ footer {
 }
 
 
+
+.text-container {
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    left: 30%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.text-container h1 {
+    font-size: 84px;
+    font-family: "Lobster", sans-serif;
+    color: #e57587;
+}
+
+.text-container p {
+    transform: translateY(-40px);
+}
+
+
+@media screen and (max-width:900px) {
+    .text-container {
+        left: 35%;
+    }
+}
+
+
 @media screen and (max-width:768px) {
+    html {
+        overflow-x: hidden;
+    }
+
     .flavor {
       margin: 2px;
       transform: scale(0.9);
@@ -397,26 +429,30 @@ footer {
       width: auto;
       overflow-x: hidden;
     }
+
+    .text-container {
+        left: 42%;
+    }
 }   
 
 
+@media screen and (max-width:600px) {
+    #landing {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .text-container {
+        display: block;
+        position: relative;
+        transform: translate(-20px, -100px);
+        left: 0;
+        top: 0;
+        width: 60vw;
+    }
 
-.text-container {
-    position: absolute;
-    width: 500px;
-    height: 250px;
-    left: 30%;
-    top: 45%;
-    transform: translate(-50%, -50%);
-}
-
-.text-container h1 {
-    font-size: 84px;
-    font-family: "Lobster", sans-serif;
-    color: #e57587;
-}
-
-.text-container p {
-    transform: translateY(-40px);
+    .text-container h1 {
+        font-size: 65px;
+    }
 }
