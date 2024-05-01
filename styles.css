@@ -88,7 +88,7 @@ section {
 
 #landing {
     background-color: #ffabfb;
-    background-image: url("/media/slider.jpg");
+    background-image: url("media/slider.jpg");
     background-size: cover;
     background-position: center;
 
